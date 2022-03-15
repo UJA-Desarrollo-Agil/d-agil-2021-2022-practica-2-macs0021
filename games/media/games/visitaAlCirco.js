@@ -72,6 +72,7 @@ undum.game.situations = {
     ),
     pasillo: new undum.SimpleSituation(
         "<h1>En el pasillo</h1>\
+        <img width=500 height=600 class='img-situation' src='./media/img/pasillo.jpg'>\
         <p>Has salido al pasillo,</p>\
         <p>Te encuentras en el pasillo y puedes elegir entre <a href='cocina'> entrar a la cocina</a>, <a href='bano'> entrar en el baño</a> o  <a href='salida'> salir de casa</a></p>"
     ),
@@ -119,10 +120,12 @@ undum.game.situations = {
 
     puertacirco: new undum.SimpleSituation(
         "<h1>Puerta del circo</h1>\
+        <img width=500 height=600 class='img-situation' src='./media/img/circo.jpg'>\
         <p>El circo está lleno de gente, hay una cola gigante de personas que esperan para entrar. No ves a tus amigos por ninguna parte. Pasa el tiempo y tus amigos no llegan, así que debes decidir si <a href='dentrocirco'> entrar al circo</a> o abandonar a tus amigos a su suerte y <a href='salidacirco'>volver a casa</a></p >"
     ),
     dentrocirco: new undum.SimpleSituation(
         "<h1>Interior del circo</h1>\
+        <img width=500 height=600 class='img-situation' src='./media/img/payasos.jpg'>\
         <p>Has decidido entrar en el circo. tu compañero de piso se sienta a tu lado. Comienza el espectáculo y tus amigos aún no han aparecido. Además de eso tu compañero informático\
         no para de quejarse de que tiene que entregar una práctica de desarrollo ágil, le quedan dos días para entregarla y aún no ha empezado. En el escenario aparecen tres payasos que comienzan a hacer piruetas\
         y movimientos extraños. Uno de ellos pide un voluntario y tu estás pensando si <a href='./ofrecerte'> ofrecerte voluntario</a> con tal de separarte de tu compañero o <a href='./esconderte'>hacerte el distraido</a> como\
@@ -145,7 +148,7 @@ undum.game.situations = {
     ),
 
     salidacirco: new undum.SimpleSituation(
-        "<h1>Vuelta a casa</h1> <p> Has decidido volver a casa. Puedes elegir entre <a href='./taxi'>llamar a un taxi</a> o <a href='./caminar'>volver caminando</a>, lo cual es muy peligroso y nada aconsejable</p >",
+        "<h1>Vuelta a casa</h1> <img width=500 height=600 class='img-situation' src='./media/img/circo.jpg'> <p> Has decidido volver a casa. Puedes elegir entre <a href='./taxi'>llamar a un taxi</a> o <a href='./caminar'>volver caminando</a>, lo cual es muy peligroso y nada aconsejable</p >",
         {
             actions: {
                 'taxi': function( character, system, action ) {
@@ -160,7 +163,7 @@ undum.game.situations = {
     ),
 
     vueltacasaandando: new undum.SimpleSituation(
-        "<h1>Puerta de casa</h1> <p> ¡Has llegado a casa!, usas la llave para entrar. piensas en si <a href='alarma'>ponerte una alarma</a> para ir mañana a clases o <a href='descanso'>tomarte un dia de descanso</a></p >"
+        "<h1>Puerta de casa</h1>  \<img width=500 height=600 class='img-situation' src='./media/img/puerta.jpg'><p> ¡Has llegado a casa!, usas la llave para entrar. piensas en si <a href='alarma'>ponerte una alarma</a> para ir mañana a clases o <a href='descanso'>tomarte un dia de descanso</a></p >"
     ),
 
     alarma: new undum.SimpleSituation(
