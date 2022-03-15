@@ -241,10 +241,56 @@ undum.game.situations = {
     ),
 
     salidacalcetines: new undum.SimpleSituation(
-        "<p>Tus pies están calentitos y seguros, te colocas los zapatos en la entrada y tu y tu compañero de piso pedís un taxi que os deja en la puerta del circo. Antes de entrar te" +
-        "planteas si <a href='aux'> entrar al circo</a> o abandonar a tus amigos a su suerte y <a href='aux'>volver a casa</a></p>"
+        "<p>Tus pies están calentitos y seguros, te colocas los zapatos en la entrada y tu y tu compañero de piso pedís un taxi que os deja en la puerta del circo.</p>",
+         {
+            enter: function (character, system, from) {
+                system.doLink('puertacirco');
+            }
 
+        }
 
+    ),
+
+    puertacirco: new undum.SimpleSituation(
+        "<h1>Puerta del circo</h1>\
+        <p>El circo está lleno de gente, hay una cola gigante de personas que esperan para entrar. No ves a tus amigos por ninguna parte. Pasa el tiempo y tus amigos no llegan, así que debes decidir si <a href='dentrocirco'> entrar al circo</a> o abandonar a tus amigos a su suerte y <a href='aux'>volver a casa</a></p >"
+    ),
+    dentrocirco: new undum.SimpleSituation(
+        "<h1>Interior del circo</h1>\
+        <p>Has decidido entrar en el circo. tu compañero de piso se sienta a tu lado. Comienza el espectáculo y tus amigos aún no han aparecido. Además de eso tu compañero informático\
+        no para de quejarse de que tiene que entregar una práctica de desarrollo ágil, le quedan dos días para entregarla y aún no ha empezado. En el escenario aparecen tres payasos que comienzan a hacer piruetas\
+        y movimientos extraños. Uno de ellos pide un voluntario y tu estás pensando si <a href='./ofrecerte'> ofrecerte voluntario</a> con tal de separarte de tu compañero o <a href='./esconderte'>hacerte el distraido</a> como\
+        cuando tu profesor de primaria pedía un voluntario para corregir un ejercicio</p >",
+        {
+            actions: {
+                'ofrecerte': function( character, system, action ) {
+                    system.write( '<p> Decides presentarte voluntario. Los payasos te hacen saltar sobre un trampolín, nunca lo habías hecho antes así que te caes y te haces daño. Mucho daño. Al menos no tienes que estar escuchando las quejas de tu compañero. Puedes <a href="inicio">volver a empezar</a> o <a href="finalizar">finalizar</a>.</p>');
+                },
+                'esconderte': function( character, system, action ) {
+                    system.write( '<p> Decides hacerte el despistado y esperar a que otra persona salga voluntaria. Un chico levanta la mano, sale al escenario y los payasos le hacen saltar en un trampolín.' +
+                        ' Se ve que el chico maneja porque hace piruetas mientras salta. Tú nunca has saltado en un trampolín pero piensas que lo más seguro es que lo hicieras mejor que el. De repente un león se escapa ' +
+                        ' y ataca a tu compañero de piso. Se vé que el también estaba harto de que hablara tanto. Cierras los ojos para no ver lo que está ocurriendo pero por el sonido ya te lo imaginas. Cuando vuelves a abrir los ojos ' +
+                        'ves al león un poco más gordo de lo normal. Escuchando más de cerca se escucha una voz: ' +
+                        '<p class=\'dialogo personaje\'>- ¡Encima la práctica es en JavaScript!¡El peor lenguaje de programación que existe!</p>' +'<p>Crees que ya has tenido suficiente, es hora de <a href=salidacirco>volver a casa</a></p>');
+                }
+
+            }
+        }
+    ),
+
+    salidacirco: new undum.SimpleSituation(
+        "<h1>Vuelta a casa</h1> <p> Has decidido volver a casa. Puedes elegir entre <a href='./taxi'>llamar a un taxi</a> o <a href='./caminar'>volver caminando</a>, lo cual es muy peligroso y nada aconsejable</p >",
+        {
+            actions: {
+                'taxi': function( character, system, action ) {
+                    system.write( '<p>Decides llamar a un taxi. El taxi llega y el taxista es muy majo, te da conversación durante todo el trayecto. Te quedas dormido en el taxi, cuando el taxista llega coge las llaves de tu bolsillo y sin despertarte te lleva a la cama como tu padre cuando eras pequeño y te dormias en el sofá (Un poco extraño). Has llegado a tu casa sano y salvo, esperemos que mañana sea un día más tranquilo.</p>' +
+                        '<h1>FIN</h1>');
+                },
+                'caminar': function( character, system, action ) {
+                    system.write( '<p>Decides ir caminando con tal de ahorrarte un par de euros. En cuanto das tres pasos unos chicos de aproximadamente 12 años te asaltan y te amenazan con pegarte, asi que al verte en inferioridad númerica no te queda más remedio que darles todas tus pertencias. Solo te dejan con tus calcetines de unicornio porque piensan que son muy feos. Al menos tienes los pies calentitos así que aún puedes andar, la única opción es <a href=vueltacasa\'> seguir caminando </a> hasta llegar a casa </p>');
+                }
+            }
+        }
     ),
 
     habnollave: new undum.SimpleSituation(
