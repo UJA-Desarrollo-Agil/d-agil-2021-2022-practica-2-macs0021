@@ -26,3 +26,15 @@ La URL de dicho tablero es: https://trello.com/b/mmtWMXac/2-pr%C3%A1ctica-desarr
 La primera captura de pantalla (Imagen 1) que voy a incluir es la del tablero prácticamente al comienzo del proyecto, con las actividades a realizar que planifiqué en el inicio
 
 <img src="capturas/capturaTrello2.png" alt="imagen 1" title="Imagen 1">
+
+La segunda captura de pantalla (Imagen 2) muestra el tablero de Trello más avanzado, cuando ya se habían completado algunas tareas. Además, con el avance del trabajo he notado que hacía falta realizar otra tarea, limpiar código y sustituir imágenes, la cual he añadido en ese momento a la columna de "por hacer"
+
+<img src="capturas/capturaTrello3.png" alt="imagen 2" title="Imagen 2">
+
+La última captura de pantalla sobre Trello (Imagen 3) muestra el tablero de Trello prácticamente finalizado, con la única tarea en proceso de completar la documentación
+
+<img src="capturas/capturaTrello5.png" alt="imagen 3" title="Imagen 3">
+
+Para finalizar muestro una captura de pantalla sobre Telegram donde se muestran algunos commits que el bot me ha notificado durante el proyecto (Imagen 4) 
+
+<img src="capturas/capturaTelegram.png" alt="imagen 4" title="Imagen 4">
