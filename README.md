@@ -24,4 +24,4 @@ La URL de dicho tablero es: https://trello.com/b/mmtWMXac/2-pr%C3%A1ctica-desarr
 ## Capturas de pantalla
 
 La primera captura de pantalla (Imagen 1) que voy a incluir es la del tablero prácticamente al comienzo del proyecto, con las actividades a realizar que planifiqué en el inicio
-<img src="/capturas/capturaTrello2.jpg" alt="imagen 1" title="Imagen 1">
+<img src="d-agil-2021-2022-practica-2-macs0021/capturas/capturaTrello2.png" alt="imagen 1" title="Imagen 1">
